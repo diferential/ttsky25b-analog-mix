@@ -1,0 +1,57 @@
+Simulation of an R2R DAC with Verilator and d_cosim
+
+.lib /home/matt/work/asic-workshop/shuttle-2404/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+* https://sourceforge.net/p/ngspice/ngspice/ci/master/tree/examples/xspice/verilator/
+
+* The digital portion of the circuit is specified in compiled Verilog.
+* list the inputs and outputs
+adut [ clk n_rst ext_data d7 d6 d5 d4 d3 d2 d1 d0 load_divider ] [b7 b6 b5 b4 b3 b2 b1 b0] null dut
+.model dut d_cosim simulation="./r2r_dac_control.so"
+
+* connect the driver to the R2R dac
+* had to edit spice exported by xschem to add the subckt and ends
+
+.include "../xschem/simulation/r2r.spice" 
+.include "../xschem/simulation/dac_drive.spice" 
+*.include "../mag/r2r.spice" 
+
+* the r2r DAC
+xr2r b0_3v3 b1_3v3 b2_3v3 b3_3v3 b4_3v3 b5_3v3 b6_3v3 b7_3v3 out 0 r2r
+
+* the 8 level shifting drivers
+xdac_d0 vaa vcc b0 b0_3v3 0 dac_drive
+xdac_d1 vaa vcc b1 b1_3v3 0 dac_drive
+xdac_d2 vaa vcc b2 b2_3v3 0 dac_drive
+xdac_d3 vaa vcc b3 b3_3v3 0 dac_drive
+xdac_d4 vaa vcc b4 b4_3v3 0 dac_drive
+xdac_d5 vaa vcc b5 b5_3v3 0 dac_drive
+xdac_d6 vaa vcc b6 b6_3v3 0 dac_drive
+xdac_d7 vaa vcc b7 b7_3v3 0 dac_drive
+
+* simulate tt output path
+R1 out pin_out 500
+C1 out 0 5p
+
+
+
+**** End of the ADC and its subcircuits.  Begin test circuit ****
+
+.param vcc=1.8
+vcc vcc 0 {vcc}
+vaa vaa 0 3.3
+
+* Digital clock signal
+
+aclock 0 clk clock
+.model clock d_osc cntl_array=[-1 1] freq_array=[1Meg 1Meg]
+
+* reset signal
+
+Vreset n_rst 0 PULSE 3 0 1n 20p 20p 1u 500u
+
+.control
+tran 100n 400u
+plot pin_out
+.endc
+.end
