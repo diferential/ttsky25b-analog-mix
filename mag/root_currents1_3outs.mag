@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1762740051
+timestamp 1762741441
 << viali >>
 rect 860 2600 1360 2660
 rect 860 2360 1360 2420
@@ -240,39 +240,39 @@ rect 740 0 780 100
 rect 880 0 940 100
 rect 740 -40 940 0
 use lvl_shift_lohi1  lvl_shift_lohi1_0
-timestamp 1762740051
+timestamp 1762741441
 transform 1 0 0 0 1 0
 box 0 0 2820 1680
 use sky130_fd_pr__nfet_01v8_lvt_GXPBWL  sky130_fd_pr__nfet_01v8_lvt_GXPBWL_0
-timestamp 1762739948
+timestamp 1762741441
 transform -1 0 3365 0 -1 1213
 box -325 -1213 325 1213
 use sky130_fd_pr__nfet_g5v0d10v5_FLD2WH  sky130_fd_pr__nfet_g5v0d10v5_FLD2WH_0
-timestamp 1762739948
+timestamp 1762741441
 transform 0 -1 3267 1 0 2977
 box -357 -427 357 427
 use sky130_fd_pr__pfet_g5v0d10v5_PY9F4X  sky130_fd_pr__pfet_g5v0d10v5_PY9F4X_0
-timestamp 1762739948
+timestamp 1762741441
 transform 1 0 4427 0 1 2262
 box -387 -462 387 462
 use sky130_fd_pr__pfet_g5v0d10v5_PY9F4X  sky130_fd_pr__pfet_g5v0d10v5_PY9F4X_1
-timestamp 1762739948
+timestamp 1762741441
 transform 1 0 4427 0 1 482
 box -387 -462 387 462
 use sky130_fd_pr__pfet_g5v0d10v5_PY9F4X  sky130_fd_pr__pfet_g5v0d10v5_PY9F4X_2
-timestamp 1762739948
+timestamp 1762741441
 transform 1 0 4427 0 1 1382
 box -387 -462 387 462
 use sky130_fd_pr__pfet_g5v0d10v5_PY9F4X  sky130_fd_pr__pfet_g5v0d10v5_PY9F4X_3
-timestamp 1762739948
+timestamp 1762741441
 transform 1 0 4427 0 1 3162
 box -387 -462 387 462
 use sky130_fd_pr__res_high_po_0p69_SYH6D8  sky130_fd_pr__res_high_po_0p69_SYH6D8_0
-timestamp 1762740051
+timestamp 1762741441
 transform 0 1 1038 -1 0 2072
 box -352 -998 352 998
 use sky130_fd_pr__res_xhigh_po_0p69_A2KNKC  sky130_fd_pr__res_xhigh_po_0p69_A2KNKC_0
-timestamp 1762739948
+timestamp 1762741441
 transform 0 -1 1198 1 0 2952
 box -352 -1198 352 1198
 << labels >>

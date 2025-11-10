@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1762740518
+timestamp 1762741441
 << metal1 >>
 rect 23090 11500 23100 11700
 rect 23600 11500 23610 11700
@@ -344,11 +344,11 @@ rect 23370 0 23550 440
 rect 27174 315 27469 1448
 rect 27234 0 27414 315
 use opamp3hvs  opamp3hvs_0
-timestamp 1762740518
+timestamp 1762741441
 transform 1 0 20960 0 1 4240
 box -1120 0 5400 3300
 use root_currents1_3outs  root_currents1_3outs_0
-timestamp 1762740051
+timestamp 1762741441
 transform 1 0 20640 0 1 8040
 box 0 -40 4920 3624
 << labels >>
