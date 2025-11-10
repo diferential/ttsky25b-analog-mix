@@ -16,7 +16,7 @@ vimeasp net3 voutstage1 0
 .save i(vimeasp)
 vimeasn net2 VN 0
 .save i(vimeasn)
-XC1 voutstage1 VOUT sky130_fd_pr__cap_mim_m3_1 W=2 L=2 m=1
+XC1 voutstage1 VOUT sky130_fd_pr__cap_mim_m3_1 W=6 L=6 m=1
 XM6 net1 VBIASN_G5W2L1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
 XM8 net3 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
 XM2 net2 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
