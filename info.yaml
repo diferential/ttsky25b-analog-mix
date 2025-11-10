@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "3V3 Opamp"      # Project title
+  title:        "3V3 Opamp and DRAM cell"      # Project title
   author:       "Emilian Miron"      # Your name
   discord:      "diferential"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Simple opamp with 3.3v power and DRAM cell"      # One line description of what your project does
