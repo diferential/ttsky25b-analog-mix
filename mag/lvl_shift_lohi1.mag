@@ -1,22 +1,22 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1762728836
+timestamp 1762740051
 << metal1 >>
-rect 0 1160 660 1540
+rect 0 1300 660 1680
 rect 1060 1360 2820 1540
+rect 280 1120 360 1300
 rect 1400 1220 1480 1360
 rect 2140 1220 2220 1360
-rect 280 980 360 1160
 rect 1260 1120 1740 1160
+rect 140 1020 540 1060
 rect 1300 1020 1580 1060
-rect 140 880 540 920
-rect 1540 880 1580 1020
-rect 180 800 460 840
-rect 220 640 260 800
+rect 180 940 460 980
+rect 220 640 260 940
 rect 0 580 260 640
 rect 220 480 260 580
-rect 500 620 540 880
+rect 500 620 540 1020
+rect 1540 880 1580 1020
 rect 1530 820 1540 880
 rect 1600 820 1610 880
 rect 1540 780 1580 820
@@ -95,27 +95,27 @@ rect 280 440 600 480
 rect 600 430 660 440
 rect 220 410 280 420
 use sky130_fd_pr__nfet_01v8_lvt_FETKPT  sky130_fd_pr__nfet_01v8_lvt_FETKPT_0
-timestamp 1762728836
+timestamp 1762739948
 transform 1 0 266 0 1 279
 box -246 -279 246 279
 use sky130_fd_pr__nfet_g5v0d10v5_8MENFK  sky130_fd_pr__nfet_g5v0d10v5_8MENFK_0
-timestamp 1725637093
+timestamp 1762739948
 transform 1 0 2295 0 1 327
 box -515 -327 515 327
 use sky130_fd_pr__nfet_g5v0d10v5_8MENFK  sky130_fd_pr__nfet_g5v0d10v5_8MENFK_1
-timestamp 1725637093
+timestamp 1762739948
 transform 1 0 1275 0 1 327
 box -515 -327 515 327
 use sky130_fd_pr__pfet_01v8_lvt_3K87YT  sky130_fd_pr__pfet_01v8_lvt_3K87YT_0
-timestamp 1725637093
-transform 1 0 325 0 1 944
+timestamp 1762739948
+transform 1 0 325 0 1 1084
 box -325 -284 325 284
 use sky130_fd_pr__pfet_g5v0d10v5_3JABYW  sky130_fd_pr__pfet_g5v0d10v5_3JABYW_0
-timestamp 1725637093
+timestamp 1762739948
 transform 1 0 2187 0 1 1182
 box -387 -362 387 362
 use sky130_fd_pr__pfet_g5v0d10v5_3JABYW  sky130_fd_pr__pfet_g5v0d10v5_3JABYW_1
-timestamp 1725637093
+timestamp 1762739948
 transform 1 0 1447 0 1 1182
 box -387 -362 387 362
 << labels >>
@@ -128,8 +128,8 @@ flabel metal2 2640 660 2740 760 0 FreeSans 800 0 0 0 QB
 port 2 nsew
 flabel metal1 2660 1360 2820 1540 0 FreeSans 1600 0 0 0 VDDH
 port 3 nsew
-flabel metal1 0 1160 80 1240 0 FreeSans 1600 0 0 0 VDDL
-port 4 nsew
 flabel metal1 0 0 80 80 0 FreeSans 1600 0 0 0 VSS
 port 5 nsew
+flabel metal1 0 1300 80 1380 0 FreeSans 1600 0 0 0 VDDL
+port 4 nsew
 << end >>
