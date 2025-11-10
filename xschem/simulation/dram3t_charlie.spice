@@ -1,0 +1,17 @@
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/dram3t_charlie.sch
+.subckt dram3t_charlie WR RD WRB RDB BL BLB VSS
+*.PININFO WR:I RD:I WRB:I RDB:I BL:B BLB:B VSS:B
+XM5 VGB WRB BL VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 m=1
+XM7 net1 net5 net2 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 m=1
+XM1 BL RD net1 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 m=1
+vin3 net4 VSS 0
+.save i(vin3)
+XM3 net3 VGB net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 m=1
+XM4 BLB RDB net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 m=1
+vin2 net5 VG 0
+.save i(vin2)
+vin1 net2 VSS 0
+.save i(vin1)
+XM2 VG WR BLB VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 nf=1 m=1
+.ends
+.end

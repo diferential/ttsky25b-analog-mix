@@ -9,6 +9,7 @@ readnet verilog ../verilog/gl/r2r_dac_control.v $source
 # readnet spice ../xschem/simulation/r2r.spice $source
 # readnet spice ../xschem/simulation/dac_drive.spice $source
 readnet spice ../xschem/simulation/opamp3hvs.spice $source
+readnet spice ../xschem/simulation/dram3t_charlie.spice $source
 # readnet spice ../xschem/simulation/opamp3hv.spice $source
 readnet spice ../xschem/simulation/root_currents1_3outs.spice $source
 

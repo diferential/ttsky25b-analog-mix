@@ -39,6 +39,16 @@ module tt_um_emilian_opamp_3v3(
          .VSS(VGND)
     );
 
+    dram3t_charlie dr1(
+         .WR(ui_in[2]),
+         .RD(ui_in[3]),
+         .WRB(ui_in[4]),
+         .RDB(ui_in[5]),
+         .BL(ua[1]),
+         .BLB(ua[2]),
+         .VSS(VGND)
+    );
+
     // ties for the output enables
     assign uo_out[0] = VGND;
     assign uo_out[1] = VGND;
