@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1762741441
+timestamp 1762742125
 << metal1 >>
 rect 0 1300 660 1680
 rect 1060 1360 2820 1540
@@ -95,27 +95,27 @@ rect 280 440 600 480
 rect 600 430 660 440
 rect 220 410 280 420
 use sky130_fd_pr__nfet_01v8_lvt_FETKPT  sky130_fd_pr__nfet_01v8_lvt_FETKPT_0
-timestamp 1762741441
+timestamp 1762742125
 transform 1 0 266 0 1 279
 box -246 -279 246 279
 use sky130_fd_pr__nfet_g5v0d10v5_8MENFK  sky130_fd_pr__nfet_g5v0d10v5_8MENFK_0
-timestamp 1762741441
+timestamp 1762742125
 transform 1 0 2295 0 1 327
 box -515 -327 515 327
 use sky130_fd_pr__nfet_g5v0d10v5_8MENFK  sky130_fd_pr__nfet_g5v0d10v5_8MENFK_1
-timestamp 1762741441
+timestamp 1762742125
 transform 1 0 1275 0 1 327
 box -515 -327 515 327
 use sky130_fd_pr__pfet_01v8_lvt_3K87YT  sky130_fd_pr__pfet_01v8_lvt_3K87YT_0
-timestamp 1762741441
+timestamp 1762742125
 transform 1 0 325 0 1 1084
 box -325 -284 325 284
 use sky130_fd_pr__pfet_g5v0d10v5_3JABYW  sky130_fd_pr__pfet_g5v0d10v5_3JABYW_0
-timestamp 1762741441
+timestamp 1762742125
 transform 1 0 2187 0 1 1182
 box -387 -362 387 362
 use sky130_fd_pr__pfet_g5v0d10v5_3JABYW  sky130_fd_pr__pfet_g5v0d10v5_3JABYW_1
-timestamp 1762741441
+timestamp 1762742125
 transform 1 0 1447 0 1 1182
 box -387 -362 387 362
 << labels >>
