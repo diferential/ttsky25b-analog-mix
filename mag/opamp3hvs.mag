@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1762742125
+timestamp 1762788599
 << pwell >>
 rect 2085 120 2195 780
 << metal1 >>
@@ -41,7 +41,7 @@ rect 1960 210 2300 240
 rect 2340 210 2350 240
 rect 1960 200 2350 210
 use opamp3hv  opamp3hv_0
-timestamp 1762742125
+timestamp 1762788599
 transform 1 0 20 0 1 140
 box -580 -140 2210 1510
 use sky130_fd_pr__nfet_g5v0d10v5_9GCM4P  sky130_fd_pr__nfet_g5v0d10v5_9GCM4P_0
