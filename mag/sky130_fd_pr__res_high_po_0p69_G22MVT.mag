@@ -1,0 +1,92 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1724410421
+<< pwell >>
+rect -586 -798 586 798
+<< psubdiff >>
+rect -550 728 -454 762
+rect 454 728 550 762
+rect -550 666 -516 728
+rect 516 666 550 728
+rect -550 -728 -516 -666
+rect 516 -728 550 -666
+rect -550 -762 -454 -728
+rect 454 -762 550 -728
+<< psubdiffcont >>
+rect -454 728 454 762
+rect -550 -666 -516 666
+rect 516 -666 550 666
+rect -454 -762 454 -728
+<< xpolycontact >>
+rect -420 200 -282 632
+rect -420 -632 -282 -200
+rect -186 200 -48 632
+rect -186 -632 -48 -200
+rect 48 200 186 632
+rect 48 -632 186 -200
+rect 282 200 420 632
+rect 282 -632 420 -200
+<< ppolyres >>
+rect -420 -200 -282 200
+rect -186 -200 -48 200
+rect 48 -200 186 200
+rect 282 -200 420 200
+<< locali >>
+rect -550 728 -454 762
+rect 454 728 550 762
+rect -550 666 -516 728
+rect 516 666 550 728
+rect -550 -728 -516 -666
+rect 516 -728 550 -666
+rect -550 -762 -454 -728
+rect 454 -762 550 -728
+<< viali >>
+rect -404 217 -298 614
+rect -170 217 -64 614
+rect 64 217 170 614
+rect 298 217 404 614
+rect -404 -614 -298 -217
+rect -170 -614 -64 -217
+rect 64 -614 170 -217
+rect 298 -614 404 -217
+<< metal1 >>
+rect -410 614 -292 626
+rect -410 217 -404 614
+rect -298 217 -292 614
+rect -410 205 -292 217
+rect -176 614 -58 626
+rect -176 217 -170 614
+rect -64 217 -58 614
+rect -176 205 -58 217
+rect 58 614 176 626
+rect 58 217 64 614
+rect 170 217 176 614
+rect 58 205 176 217
+rect 292 614 410 626
+rect 292 217 298 614
+rect 404 217 410 614
+rect 292 205 410 217
+rect -410 -217 -292 -205
+rect -410 -614 -404 -217
+rect -298 -614 -292 -217
+rect -410 -626 -292 -614
+rect -176 -217 -58 -205
+rect -176 -614 -170 -217
+rect -64 -614 -58 -217
+rect -176 -626 -58 -614
+rect 58 -217 176 -205
+rect 58 -614 64 -217
+rect 170 -614 176 -217
+rect 58 -626 176 -614
+rect 292 -217 410 -205
+rect 292 -614 298 -217
+rect 404 -614 410 -217
+rect 292 -626 410 -614
+<< properties >>
+string FIXED_BBOX -533 -745 533 745
+string gencell sky130_fd_pr__res_high_po_0p69
+string library sky130
+string parameters w 0.690 l 2 m 1 nx 4 wmin 0.690 lmin 0.50 rho 319.8 val 1.491k dummy 0 dw 0.0 term 194.82 sterm 0.0 caplen 0 guard 1 glc 1 grc 1 gtc 1 gbc 1 compatible {sky130_fd_pr__res_high_po_0p35  sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41  sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} snake 0 full_metal 1 wmax 0.690 n_guard 0 hv_guard 0 vias 1 viagb 0 viagt 0 viagl 0 viagr 0
+string sky130_fd_pr__res_high_po_0p69_G22MVT gencell
+<< end >>

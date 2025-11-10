@@ -1,0 +1,64 @@
+magic
+tech sky130A
+timestamp 1762721383
+<< pwell >>
+rect 2085 120 2195 780
+<< metal1 >>
+rect 60 1440 220 1560
+rect 2290 665 2295 697
+rect 2343 690 2348 697
+rect 2343 665 2350 690
+rect 2300 650 2350 665
+rect 2300 590 2370 650
+rect 2175 370 2180 420
+rect 2285 370 2290 420
+rect 2310 240 2370 590
+rect 2295 210 2300 240
+rect 2340 210 2370 240
+rect 2320 200 2370 210
+rect 0 0 160 120
+rect 2080 0 2700 180
+<< via1 >>
+rect 2295 665 2343 697
+rect 2180 370 2285 420
+rect 2300 210 2340 240
+<< metal2 >>
+rect 1730 850 1850 985
+rect 5 810 40 850
+rect 5 730 40 770
+rect 2295 700 2343 702
+rect 2280 697 2380 700
+rect 2280 665 2295 697
+rect 2343 665 2380 697
+rect 2280 590 2380 665
+rect 2070 425 2235 470
+rect 2070 420 2285 425
+rect 2070 415 2180 420
+rect 2285 370 2290 420
+rect 2180 365 2285 370
+rect 2300 240 2340 245
+rect 1960 210 2300 240
+rect 2340 210 2350 240
+rect 1960 200 2350 210
+use opamp3hv  opamp3hv_0
+timestamp 1762719990
+transform 1 0 20 0 1 140
+box -20 -140 2180 1510
+use sky130_fd_pr__nfet_g5v0d10v5_9GCM4P  sky130_fd_pr__nfet_g5v0d10v5_9GCM4P_0
+timestamp 1762719990
+transform 1 0 2319 0 1 449
+box -139 -329 139 329
+<< labels >>
+flabel metal2 5 730 40 770 0 FreeSans 400 0 0 0 IN_N
+port 0 nsew
+flabel metal2 5 810 40 850 0 FreeSans 400 0 0 0 IN_P
+port 1 nsew
+flabel metal2 1730 850 1850 985 0 FreeSans 400 0 0 0 VOUT
+port 2 nsew
+flabel metal1 60 1440 220 1560 0 FreeSans 400 0 0 0 VDD
+port 3 nsew
+flabel metal1 0 0 160 120 0 FreeSans 400 0 0 0 VSS
+port 4 nsew
+flabel metal2 2300 600 2350 700 0 FreeSans 400 0 0 0 VBIAS_SINK
+port 5 nsew
+<< end >>

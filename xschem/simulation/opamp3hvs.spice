@@ -1,0 +1,36 @@
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/opamp3hvs.sch
+.subckt opamp3hvs IN_N IN_P VOUT VDD VSS VBIAS_SINK
+*.PININFO IN_N:I IN_P:I VOUT:O VDD:B VSS:B VBIAS_SINK:B
+XM1 net1 net1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+vimeasn2 VBIAS_SINK net1 0
+.save i(vimeasn2)
+x1 IN_N IN_P VOUT net1 VDD VSS opamp3hv
+.ends
+
+* expanding   symbol:  opamp3hv.sym # of pins=6
+** sym_path: /home/emilian/work/tt-rf-playground/xschem/opamp3hv.sym
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/opamp3hv.sch
+.subckt opamp3hv IN_N IN_P VOUT VBIASN_G5W2L1 VDD VSS
+*.PININFO IN_N:I IN_P:I VOUT:O VDD:B VSS:B VBIASN_G5W2L1:B
+vimeasp net3 voutstage1 0
+.save i(vimeasp)
+vimeasn net2 VN 0
+.save i(vimeasn)
+XC1 voutstage1 VOUT sky130_fd_pr__cap_mim_m3_1 W=2 L=2 m=1
+XM6 net1 VBIASN_G5W2L1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM8 net3 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM2 net2 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM1 VOUT voutstage1 net4 VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=16 nf=1 m=2
+XM4 net5 VBIASN_G5W2L1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=8 nf=1 m=2
+XM3 VN IN_N vcom VSS sky130_fd_pr__nfet_03v3_nvt L=0.5 W=4 nf=1 m=4
+XM5 voutstage1 IN_P vcom VSS sky130_fd_pr__nfet_03v3_nvt L=0.5 W=4 nf=1 m=4
+vicom vcom net1 0
+.save i(vicom)
+XC2 VSS VDD sky130_fd_pr__cap_mim_m3_1 W=4 L=4 m=1
+vimeasp1 VDD net4 0
+.save i(vimeasp1)
+vimeasn1 VOUT net5 0
+.save i(vimeasn1)
+.ends
+
+.end

@@ -10,22 +10,13 @@ module r2r_dac_control (
     );
 
     reg rst;
-    reg [7:0] divider;
-    reg [7:0] sample;
 
     initial begin
         $dumpfile ("r2r_dac_control.vcd");
         $dumpvars (0, r2r_dac_control);
     end
 
-    // sine wave
-    sine_lookup sine_lookup(
-        .clk(clk),
-        .rst(rst),
-        .divider({4'b0000, divider}), // only bottom 8 bits of the divider can be set
-        .sample(sample),
-        .cnt_zero(cnt_zero)
-    );
+    assign cnt_zero = 1'b0;
 
     // reset handling
     always @(posedge clk or posedge n_rst) begin
@@ -35,21 +26,13 @@ module r2r_dac_control (
             rst <= 1'b1;
     end
 
-    always @(posedge clk) begin
-        if(rst)
-            divider <= 0;
-        if(load_divider)
-            divider <= data;
-    end
 
     // counter and r2r output
     always @(posedge clk) begin
         if(rst) begin
             r2r_out <= 0;
-        end else if(ext_data)
-            r2r_out <= data;
-        else begin
-            r2r_out <= sample;
+    	end else begin
+            r2r_out <= 1;
         end
     end
 

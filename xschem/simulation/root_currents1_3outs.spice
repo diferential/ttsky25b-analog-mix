@@ -1,0 +1,65 @@
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/root_currents1_3outs.sch
+.subckt root_currents1_3outs EN_RESH EN_RESL VOUT1 VOUT2 VOUT3 VDDH VDDL VSS
+*.PININFO EN_RESH:I EN_RESL:I VOUT1:O VOUT2:O VOUT3:O VDDH:B VDDL:B VSS:B
+x1 VBIASP net1 VDDH root_currents1outp
+viout3 net1 VOUT3 0
+.save i(viout3)
+x4 VBIASP net2 VDDH root_currents1outp
+x2 EN_RESH EN_RESL VBIASP VDDH VDDL VSS root_currents1
+viout2 net2 VOUT2 0
+.save i(viout2)
+viout1 net3 VOUT1 0
+.save i(viout1)
+x3 VBIASP net3 VDDH root_currents1outp
+.ends
+
+* expanding   symbol:  root_currents1outp.sym # of pins=3
+** sym_path: /home/emilian/work/tt-rf-playground/xschem/root_currents1outp.sym
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/root_currents1outp.sch
+.subckt root_currents1outp VBIASP OUT VDD
+*.PININFO VBIASP:B OUT:B VDD:B
+XM7 net1 VBIASP VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+viout net1 OUT 0
+.save i(viout)
+.ends
+
+
+* expanding   symbol:  root_currents1.sym # of pins=6
+** sym_path: /home/emilian/work/tt-rf-playground/xschem/root_currents1.sym
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/root_currents1.sch
+.subckt root_currents1 EN_RESH EN_RESL VBIASP VDD VDDL VSS
+*.PININFO VSS:B EN_RESH:I VBIASP:O VDDL:B VDD:B EN_RESL:I
+XR2 V2 net3 VSS sky130_fd_pr__res_high_po_0p69 L=8.32 mult=1 m=1
+XM4 VMID VMID VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.5 W=4 nf=1 m=1
+XM5 VMID VMID VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.5 W=4 nf=1 m=1
+XM6 net1 VMID VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.5 W=4 nf=1 m=1
+XM2 V1 EN_RESH_VDD VMID VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+viout VBIASP net1 0
+.save i(viout)
+x1 EN_RESH EN_RESH_VDD net4 VDD VDDL VSS lvl_shift_lohi1
+vin1 VDD net2 0
+.save i(vin1)
+vin2 VDDL net3 0
+.save i(vin2)
+XM1 V2 EN_RESL VMID VSS sky130_fd_pr__nfet_01v8_lvt L=0.5 W=4 nf=1 m=1
+x2 VBIASP VBIASP VDD root_currents1outp
+XR3 V1 net2 VSS sky130_fd_pr__res_xhigh_po_0p69 L=12.32 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  lvl_shift_lohi1.sym # of pins=6
+** sym_path: /home/emilian/work/tt-rf-playground/xschem/lvl_shift_lohi1.sym
+** sch_path: /home/emilian/work/tt-rf-playground/xschem/lvl_shift_lohi1.sch
+.subckt lvl_shift_lohi1 D Q QB VDDH VDDL VSS
+*.PININFO D:I Q:O QB:O VDDH:B VDDL:B VSS:B
+vpwr VDDL net1 0
+.save i(vpwr)
+XM1 QB Q VDDH VDDH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM2 Q QB VDDH VDDH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM3 QB D VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM4 Q DB VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM5 DB D VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.5 W=1 nf=1 m=1
+XM6 DB D net1 VDDL sky130_fd_pr__pfet_01v8_lvt L=0.5 W=2 nf=1 m=1
+.ends
+
+.end
