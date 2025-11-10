@@ -1,6 +1,6 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/lvs/badge.svg)
 
-# Tiny Tapeout Analog R2R DAC
+# Tiny Tapeout - 3V3 Opamp
 
 - [Read the documentation for project](docs/info.md)
 
